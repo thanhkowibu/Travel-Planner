@@ -11,6 +11,8 @@ uvicorn main:app --reload --port 8000
 
 # Bước 2 (Terminal mới): Cài dependencies
 cd tests
+python -m venv venv
+venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 
 # Bước 3: Chạy tests
