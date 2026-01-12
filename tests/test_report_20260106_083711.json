@@ -1,0 +1,1679 @@
+{
+  "timestamp": "2026-01-06T08:37:55.953511",
+  "summary": {
+    "total": 15,
+    "passed": 13,
+    "failed": 2,
+    "pass_rate": "86.7%"
+  },
+  "results": [
+    {
+      "test_id": "TC01",
+      "test_name": "Budget cực thấp - 50k",
+      "input": {
+        "city": "Hanoi",
+        "budget": 50000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              }
+            ],
+            "total_cost": 0,
+            "total_duration_minutes": 270,
+            "location_count": 3
+          }
+        },
+        "execution_time": 2.070042848587036,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "max_cost": 50000,
+        "note": "Chỉ nên có địa điểm free hoặc giá rất thấp (Hồ Hoàn Kiếm, Lăng Bác)"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC02",
+      "test_name": "Budget cực cao - 10 triệu",
+      "input": {
+        "city": "Hanoi",
+        "budget": 10000000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 7,
+                "name": "Hồ Tây",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0553,
+                "lng": 105.8191,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.7,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 45,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              }
+            ],
+            "total_cost": 110000,
+            "total_duration_minutes": 585,
+            "location_count": 7
+          }
+        },
+        "execution_time": 2.0637104511260986,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 5,
+        "max_cost": 10000000,
+        "note": "Nên có nhiều địa điểm, tối ưu thời gian hơn là tiền"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC03",
+      "test_name": "Thời gian cực ngắn - 2 giờ",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 10,
+        "end_time": 12,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              }
+            ],
+            "total_cost": 30000,
+            "total_duration_minutes": 120,
+            "location_count": 2
+          }
+        },
+        "execution_time": 2.067922830581665,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "max_locations": 2,
+        "max_duration_minutes": 120,
+        "note": "Chỉ đủ thời gian cho 1-2 địa điểm"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC04",
+      "test_name": "Thời gian dài - Cả ngày",
+      "input": {
+        "city": "Hanoi",
+        "budget": 1000000,
+        "start_time": 7,
+        "end_time": 22,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 45,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              }
+            ],
+            "total_cost": 110000,
+            "total_duration_minutes": 465,
+            "location_count": 6
+          }
+        },
+        "execution_time": 2.067176103591919,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 8,
+        "max_duration_minutes": 900,
+        "note": "Nên có nhiều địa điểm trải đều cả ngày"
+      },
+      "passed": false,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC05",
+      "test_name": "Budget vừa phải - 500k (Standard)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 45,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 7,
+                "name": "Hồ Tây",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0553,
+                "lng": 105.8191,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.7,
+                "open_time": 0,
+                "close_time": 24
+              }
+            ],
+            "total_cost": 110000,
+            "total_duration_minutes": 585,
+            "location_count": 7
+          }
+        },
+        "execution_time": 2.0967860221862793,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 4,
+        "max_locations": 8,
+        "max_cost": 500000,
+        "max_duration_minutes": 600,
+        "note": "Kết quả cân bằng giữa số lượng và chất lượng"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC06",
+      "test_name": "Đà Nẵng - Budget cao",
+      "input": {
+        "city": "Danang",
+        "budget": 2000000,
+        "start_time": 7,
+        "end_time": 22,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 22,
+                "name": "Phố Cổ Hội An",
+                "city": "Danang",
+                "category": "culture",
+                "lat": 15.8791,
+                "lng": 108.335,
+                "price": 120000,
+                "time_visit": 240,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 16,
+                "name": "Ngũ Hành Sơn",
+                "city": "Danang",
+                "category": "nature",
+                "lat": 16.0023,
+                "lng": 108.2625,
+                "price": 40000,
+                "time_visit": 120,
+                "rating": 4.7,
+                "open_time": 7,
+                "close_time": 17
+              },
+              {
+                "id": 13,
+                "name": "Bãi biển Mỹ Khê",
+                "city": "Danang",
+                "category": "beach",
+                "lat": 16.0399,
+                "lng": 108.2411,
+                "price": 0,
+                "time_visit": 180,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 15,
+                "name": "Cầu Vàng",
+                "city": "Danang",
+                "category": "entertainment",
+                "lat": 15.9965,
+                "lng": 107.9951,
+                "price": 0,
+                "time_visit": 45,
+                "rating": 4.9,
+                "open_time": 7,
+                "close_time": 22
+              }
+            ],
+            "total_cost": 160000,
+            "total_duration_minutes": 585,
+            "location_count": 4
+          }
+        },
+        "execution_time": 2.0661206245422363,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 3,
+        "max_cost": 2000000,
+        "note": "Có thể bao gồm Bà Nà Hills (800k, 6 tiếng)"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC07",
+      "test_name": "Đà Nẵng - Budget thấp",
+      "input": {
+        "city": "Danang",
+        "budget": 100000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 15,
+                "name": "Cầu Vàng",
+                "city": "Danang",
+                "category": "entertainment",
+                "lat": 15.9965,
+                "lng": 107.9951,
+                "price": 0,
+                "time_visit": 45,
+                "rating": 4.9,
+                "open_time": 7,
+                "close_time": 22
+              },
+              {
+                "id": 13,
+                "name": "Bãi biển Mỹ Khê",
+                "city": "Danang",
+                "category": "beach",
+                "lat": 16.0399,
+                "lng": 108.2411,
+                "price": 0,
+                "time_visit": 180,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 21,
+                "name": "Sơn Trà - Chùa Linh Ứng",
+                "city": "Danang",
+                "category": "culture",
+                "lat": 16.1088,
+                "lng": 108.2704,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 6,
+                "close_time": 18
+              }
+            ],
+            "total_cost": 0,
+            "total_duration_minutes": 345,
+            "location_count": 3
+          }
+        },
+        "execution_time": 2.053805351257324,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 2,
+        "max_cost": 100000,
+        "note": "Chỉ nên có biển và địa điểm free (Mỹ Khê, Non Nước)"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC08",
+      "test_name": "Pace Fast - Nhanh",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "fast"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 62,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 7,
+                "name": "Hồ Tây",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0553,
+                "lng": 105.8191,
+                "price": 0,
+                "time_visit": 84,
+                "rating": 4.7,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 84,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 9,
+                "name": "Cầu Long Biên",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0454,
+                "lng": 105.8607,
+                "price": 0,
+                "time_visit": 31,
+                "rating": 4.5,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 3,
+                "name": "Phở Gia Truyền Bát Đàn",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0325,
+                "lng": 105.8473,
+                "price": 60000,
+                "time_visit": 31,
+                "rating": 4.5,
+                "open_time": 6,
+                "close_time": 22
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 62,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 42,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 11,
+                "name": "Cafe Giảng (Trứng cà phê)",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0297,
+                "lng": 105.8526,
+                "price": 35000,
+                "time_visit": 21,
+                "rating": 4.6,
+                "open_time": 7,
+                "close_time": 22
+              },
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 31,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              }
+            ],
+            "total_cost": 205000,
+            "total_duration_minutes": 448,
+            "location_count": 9
+          }
+        },
+        "execution_time": 2.0616304874420166,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 6,
+        "note": "Nên có nhiều địa điểm hơn normal vì thời gian mỗi chỗ giảm"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC09",
+      "test_name": "Pace Slow - Thong thả",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "slow"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 117,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 78,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 78,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 117,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 11,
+                "name": "Cafe Giảng (Trứng cà phê)",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0297,
+                "lng": 105.8526,
+                "price": 35000,
+                "time_visit": 39,
+                "rating": 4.6,
+                "open_time": 7,
+                "close_time": 22
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 156,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              }
+            ],
+            "total_cost": 95000,
+            "total_duration_minutes": 585,
+            "location_count": 6
+          }
+        },
+        "execution_time": 2.058481216430664,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "max_locations": 6,
+        "note": "Nên có ít địa điểm hơn normal vì thời gian mỗi chỗ tăng"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC10",
+      "test_name": "Budget = 0 (Free only)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 0,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              }
+            ],
+            "total_cost": 0,
+            "total_duration_minutes": 270,
+            "location_count": 3
+          }
+        },
+        "execution_time": 2.06211519241333,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "max_cost": 0,
+        "note": "Chỉ có địa điểm free (Hồ Hoàn Kiếm, Lăng Bác, Cầu Long Biên)"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC11",
+      "test_name": "Performance Test - 100 generations",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 100,
+          "generations": 100,
+          "mutation_rate": 0.1
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              }
+            ],
+            "total_cost": 60000,
+            "total_duration_minutes": 420,
+            "location_count": 5
+          }
+        },
+        "execution_time": 2.0557851791381836,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "max_execution_time_seconds": 10,
+        "note": "Thời gian chạy không quá 10 giây"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC12",
+      "test_name": "Mutation Rate cao - 50%",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 50,
+          "generations": 50,
+          "mutation_rate": 0.5
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 7,
+                "name": "Hồ Tây",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0553,
+                "lng": 105.8191,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.7,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 45,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              }
+            ],
+            "total_cost": 110000,
+            "total_duration_minutes": 585,
+            "location_count": 7
+          }
+        },
+        "execution_time": 2.0726704597473145,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "note": "Kết quả có thể không ổn định, fitness dao động"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC13",
+      "test_name": "Mutation Rate thấp - 0%",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 50,
+          "generations": 50,
+          "mutation_rate": 0.0
+        }
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 8,
+                "name": "Bún Chả Hàng Mành",
+                "city": "Hanoi",
+                "category": "food",
+                "lat": 21.0312,
+                "lng": 105.852,
+                "price": 50000,
+                "time_visit": 45,
+                "rating": 4.7,
+                "open_time": 10,
+                "close_time": 21
+              },
+              {
+                "id": 2,
+                "name": "Văn Miếu - Quốc Tử Giám",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0293,
+                "lng": 105.8356,
+                "price": 30000,
+                "time_visit": 60,
+                "rating": 4.8,
+                "open_time": 8,
+                "close_time": 17
+              },
+              {
+                "id": 7,
+                "name": "Hồ Tây",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0553,
+                "lng": 105.8191,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.7,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 5,
+                "name": "Hồ Hoàn Kiếm",
+                "city": "Hanoi",
+                "category": "nature",
+                "lat": 21.0285,
+                "lng": 105.8542,
+                "price": 0,
+                "time_visit": 60,
+                "rating": 4.9,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 1,
+                "name": "Lăng Chủ tịch Hồ Chí Minh",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0368,
+                "lng": 105.8347,
+                "price": 0,
+                "time_visit": 90,
+                "rating": 5.0,
+                "open_time": 8,
+                "close_time": 11
+              },
+              {
+                "id": 10,
+                "name": "Phố Cổ Hà Nội",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0341,
+                "lng": 105.8518,
+                "price": 0,
+                "time_visit": 120,
+                "rating": 4.8,
+                "open_time": 0,
+                "close_time": 24
+              },
+              {
+                "id": 4,
+                "name": "Nhà Tù Hỏa Lò",
+                "city": "Hanoi",
+                "category": "history",
+                "lat": 21.0253,
+                "lng": 105.8463,
+                "price": 30000,
+                "time_visit": 90,
+                "rating": 4.7,
+                "open_time": 8,
+                "close_time": 17
+              }
+            ],
+            "total_cost": 110000,
+            "total_duration_minutes": 585,
+            "location_count": 7
+          }
+        },
+        "execution_time": 2.065171718597412,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "note": "Có thể kẹt ở local optimum, fitness hội tụ sớm"
+      },
+      "passed": true,
+      "status": "completed"
+    },
+    {
+      "test_id": "TC14",
+      "test_name": "So sánh: Normal vs Fast vs Slow",
+      "results": [
+        {
+          "success": true,
+          "data": {
+            "status": "success",
+            "result": {
+              "itinerary": [
+                {
+                  "id": 5,
+                  "name": "Hồ Hoàn Kiếm",
+                  "city": "Hanoi",
+                  "category": "nature",
+                  "lat": 21.0285,
+                  "lng": 105.8542,
+                  "price": 0,
+                  "time_visit": 42,
+                  "rating": 4.9,
+                  "open_time": 0,
+                  "close_time": 24
+                },
+                {
+                  "id": 4,
+                  "name": "Nhà Tù Hỏa Lò",
+                  "city": "Hanoi",
+                  "category": "history",
+                  "lat": 21.0253,
+                  "lng": 105.8463,
+                  "price": 30000,
+                  "time_visit": 62,
+                  "rating": 4.7,
+                  "open_time": 8,
+                  "close_time": 17
+                },
+                {
+                  "id": 8,
+                  "name": "Bún Chả Hàng Mành",
+                  "city": "Hanoi",
+                  "category": "food",
+                  "lat": 21.0312,
+                  "lng": 105.852,
+                  "price": 50000,
+                  "time_visit": 31,
+                  "rating": 4.7,
+                  "open_time": 10,
+                  "close_time": 21
+                },
+                {
+                  "id": 2,
+                  "name": "Văn Miếu - Quốc Tử Giám",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0293,
+                  "lng": 105.8356,
+                  "price": 30000,
+                  "time_visit": 42,
+                  "rating": 4.8,
+                  "open_time": 8,
+                  "close_time": 17
+                },
+                {
+                  "id": 7,
+                  "name": "Hồ Tây",
+                  "city": "Hanoi",
+                  "category": "nature",
+                  "lat": 21.0553,
+                  "lng": 105.8191,
+                  "price": 0,
+                  "time_visit": 84,
+                  "rating": 4.7,
+                  "open_time": 0,
+                  "close_time": 24
+                },
+                {
+                  "id": 1,
+                  "name": "Lăng Chủ tịch Hồ Chí Minh",
+                  "city": "Hanoi",
+                  "category": "history",
+                  "lat": 21.0368,
+                  "lng": 105.8347,
+                  "price": 0,
+                  "time_visit": 62,
+                  "rating": 5.0,
+                  "open_time": 8,
+                  "close_time": 11
+                },
+                {
+                  "id": 10,
+                  "name": "Phố Cổ Hà Nội",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0341,
+                  "lng": 105.8518,
+                  "price": 0,
+                  "time_visit": 84,
+                  "rating": 4.8,
+                  "open_time": 0,
+                  "close_time": 24
+                }
+              ],
+              "total_cost": 110000,
+              "total_duration_minutes": 407,
+              "location_count": 7
+            }
+          },
+          "execution_time": 2.0820741653442383,
+          "status_code": 200
+        },
+        {
+          "success": true,
+          "data": {
+            "status": "success",
+            "result": {
+              "itinerary": [
+                {
+                  "id": 1,
+                  "name": "Lăng Chủ tịch Hồ Chí Minh",
+                  "city": "Hanoi",
+                  "category": "history",
+                  "lat": 21.0368,
+                  "lng": 105.8347,
+                  "price": 0,
+                  "time_visit": 90,
+                  "rating": 5.0,
+                  "open_time": 8,
+                  "close_time": 11
+                },
+                {
+                  "id": 4,
+                  "name": "Nhà Tù Hỏa Lò",
+                  "city": "Hanoi",
+                  "category": "history",
+                  "lat": 21.0253,
+                  "lng": 105.8463,
+                  "price": 30000,
+                  "time_visit": 90,
+                  "rating": 4.7,
+                  "open_time": 8,
+                  "close_time": 17
+                },
+                {
+                  "id": 5,
+                  "name": "Hồ Hoàn Kiếm",
+                  "city": "Hanoi",
+                  "category": "nature",
+                  "lat": 21.0285,
+                  "lng": 105.8542,
+                  "price": 0,
+                  "time_visit": 60,
+                  "rating": 4.9,
+                  "open_time": 0,
+                  "close_time": 24
+                },
+                {
+                  "id": 2,
+                  "name": "Văn Miếu - Quốc Tử Giám",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0293,
+                  "lng": 105.8356,
+                  "price": 30000,
+                  "time_visit": 60,
+                  "rating": 4.8,
+                  "open_time": 8,
+                  "close_time": 17
+                },
+                {
+                  "id": 10,
+                  "name": "Phố Cổ Hà Nội",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0341,
+                  "lng": 105.8518,
+                  "price": 0,
+                  "time_visit": 120,
+                  "rating": 4.8,
+                  "open_time": 0,
+                  "close_time": 24
+                }
+              ],
+              "total_cost": 60000,
+              "total_duration_minutes": 420,
+              "location_count": 5
+            }
+          },
+          "execution_time": 2.098698854446411,
+          "status_code": 200
+        },
+        {
+          "success": true,
+          "data": {
+            "status": "success",
+            "result": {
+              "itinerary": [
+                {
+                  "id": 2,
+                  "name": "Văn Miếu - Quốc Tử Giám",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0293,
+                  "lng": 105.8356,
+                  "price": 30000,
+                  "time_visit": 78,
+                  "rating": 4.8,
+                  "open_time": 8,
+                  "close_time": 17
+                },
+                {
+                  "id": 5,
+                  "name": "Hồ Hoàn Kiếm",
+                  "city": "Hanoi",
+                  "category": "nature",
+                  "lat": 21.0285,
+                  "lng": 105.8542,
+                  "price": 0,
+                  "time_visit": 78,
+                  "rating": 4.9,
+                  "open_time": 0,
+                  "close_time": 24
+                },
+                {
+                  "id": 1,
+                  "name": "Lăng Chủ tịch Hồ Chí Minh",
+                  "city": "Hanoi",
+                  "category": "history",
+                  "lat": 21.0368,
+                  "lng": 105.8347,
+                  "price": 0,
+                  "time_visit": 117,
+                  "rating": 5.0,
+                  "open_time": 8,
+                  "close_time": 11
+                },
+                {
+                  "id": 7,
+                  "name": "Hồ Tây",
+                  "city": "Hanoi",
+                  "category": "nature",
+                  "lat": 21.0553,
+                  "lng": 105.8191,
+                  "price": 0,
+                  "time_visit": 156,
+                  "rating": 4.7,
+                  "open_time": 0,
+                  "close_time": 24
+                },
+                {
+                  "id": 10,
+                  "name": "Phố Cổ Hà Nội",
+                  "city": "Hanoi",
+                  "category": "culture",
+                  "lat": 21.0341,
+                  "lng": 105.8518,
+                  "price": 0,
+                  "time_visit": 156,
+                  "rating": 4.8,
+                  "open_time": 0,
+                  "close_time": 24
+                }
+              ],
+              "total_cost": 30000,
+              "total_duration_minutes": 585,
+              "location_count": 5
+            }
+          },
+          "execution_time": 2.086454391479492,
+          "status_code": 200
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "test_id": "TC15",
+      "test_name": "Impossible Constraint",
+      "input": {
+        "city": "Hanoi",
+        "budget": 10000,
+        "start_time": 10,
+        "end_time": 10.5,
+        "pace": "normal"
+      },
+      "result": {
+        "success": true,
+        "data": {
+          "status": "success",
+          "result": {
+            "itinerary": [
+              {
+                "id": 6,
+                "name": "Chùa Một Cột",
+                "city": "Hanoi",
+                "category": "culture",
+                "lat": 21.0355,
+                "lng": 105.8336,
+                "price": 0,
+                "time_visit": 30,
+                "rating": 4.6,
+                "open_time": 7,
+                "close_time": 18
+              }
+            ],
+            "total_cost": 0,
+            "total_duration_minutes": 30,
+            "location_count": 1
+          }
+        },
+        "execution_time": 2.0833804607391357,
+        "status_code": 200
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "note": "GA nên trả về ít nhất 1 địa điểm free hoặc rỗng"
+      },
+      "passed": true,
+      "status": "completed"
+    }
+  ]
+}

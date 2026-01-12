@@ -1,0 +1,317 @@
+{
+  "test_cases": [
+    {
+      "id": "TC01",
+      "name": "Budget cực thấp - 50k",
+      "description": "Kiểm tra xem GA có tìm được lịch trình với ngân sách rất thấp không",
+      "input": {
+        "city": "Hanoi",
+        "budget": 50000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "max_cost": 50000,
+        "note": "Chỉ nên có địa điểm free hoặc giá rất thấp (Hồ Hoàn Kiếm, Lăng Bác)"
+      }
+    },
+    {
+      "id": "TC02",
+      "name": "Budget cực cao - 10 triệu",
+      "description": "Kiểm tra xem GA có tối ưu được với ngân sách cao không",
+      "input": {
+        "city": "Hanoi",
+        "budget": 10000000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 5,
+        "max_cost": 10000000,
+        "note": "Nên có nhiều địa điểm, tối ưu thời gian hơn là tiền"
+      }
+    },
+    {
+      "id": "TC03",
+      "name": "Thời gian cực ngắn - 2 giờ",
+      "description": "Kiểm tra với thời gian rất hạn chế",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 10,
+        "end_time": 12,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "max_locations": 2,
+        "max_duration_minutes": 120,
+        "note": "Chỉ đủ thời gian cho 1-2 địa điểm"
+      }
+    },
+    {
+      "id": "TC04",
+      "name": "Thời gian dài - Cả ngày",
+      "description": "Kiểm tra tối ưu với thời gian dài",
+      "input": {
+        "city": "Hanoi",
+        "budget": 1000000,
+        "start_time": 7,
+        "end_time": 22,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 8,
+        "max_duration_minutes": 900,
+        "note": "Nên có nhiều địa điểm trải đều cả ngày"
+      }
+    },
+    {
+      "id": "TC05",
+      "name": "Budget vừa phải - 500k (Standard)",
+      "description": "Test case chuẩn cho demo",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 4,
+        "max_locations": 8,
+        "max_cost": 500000,
+        "max_duration_minutes": 600,
+        "note": "Kết quả cân bằng giữa số lượng và chất lượng"
+      }
+    },
+    {
+      "id": "TC06",
+      "name": "Đà Nẵng - Budget cao",
+      "description": "Kiểm tra với Đà Nẵng và ngân sách cao (Bà Nà 800k)",
+      "input": {
+        "city": "Danang",
+        "budget": 2000000,
+        "start_time": 7,
+        "end_time": 22,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 3,
+        "max_cost": 2000000,
+        "note": "Có thể bao gồm Bà Nà Hills (800k, 6 tiếng)"
+      }
+    },
+    {
+      "id": "TC07",
+      "name": "Đà Nẵng - Budget thấp",
+      "description": "Kiểm tra Đà Nẵng với ngân sách thấp (chỉ biển và free spots)",
+      "input": {
+        "city": "Danang",
+        "budget": 100000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 2,
+        "max_cost": 100000,
+        "note": "Chỉ nên có biển và địa điểm free (Mỹ Khê, Non Nước)"
+      }
+    },
+    {
+      "id": "TC08",
+      "name": "Pace Fast - Nhanh",
+      "description": "Kiểm tra với tốc độ nhanh (giảm 30% thời gian)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "fast"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 6,
+        "note": "Nên có nhiều địa điểm hơn normal vì thời gian mỗi chỗ giảm"
+      }
+    },
+    {
+      "id": "TC09",
+      "name": "Pace Slow - Thong thả",
+      "description": "Kiểm tra với tốc độ chậm (tăng 30% thời gian)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "slow"
+      },
+      "expected": {
+        "status": "success",
+        "max_locations": 6,
+        "note": "Nên có ít địa điểm hơn normal vì thời gian mỗi chỗ tăng"
+      }
+    },
+    {
+      "id": "TC10",
+      "name": "Budget = 0 (Free only)",
+      "description": "Edge case: Chỉ đi free",
+      "input": {
+        "city": "Hanoi",
+        "budget": 0,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "max_cost": 0,
+        "note": "Chỉ có địa điểm free (Hồ Hoàn Kiếm, Lăng Bác, Cầu Long Biên)"
+      }
+    },
+    {
+      "id": "TC11",
+      "name": "Performance Test - 100 generations",
+      "description": "Kiểm tra thời gian chạy với generations cao",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 100,
+          "generations": 100,
+          "mutation_rate": 0.1
+        }
+      },
+      "expected": {
+        "status": "success",
+        "max_execution_time_seconds": 10,
+        "note": "Thời gian chạy không quá 10 giây"
+      }
+    },
+    {
+      "id": "TC12",
+      "name": "Mutation Rate cao - 50%",
+      "description": "Kiểm tra với mutation rate cao (không ổn định)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 50,
+          "generations": 50,
+          "mutation_rate": 0.5
+        }
+      },
+      "expected": {
+        "status": "success",
+        "note": "Kết quả có thể không ổn định, fitness dao động"
+      }
+    },
+    {
+      "id": "TC13",
+      "name": "Mutation Rate thấp - 0%",
+      "description": "Kiểm tra với không có mutation (dễ kẹt cục bộ)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "algorithm_params": {
+          "population_size": 50,
+          "generations": 50,
+          "mutation_rate": 0.0
+        }
+      },
+      "expected": {
+        "status": "success",
+        "note": "Có thể kẹt ở local optimum, fitness hội tụ sớm"
+      }
+    },
+    {
+      "id": "TC14",
+      "name": "Impossible Constraint",
+      "description": "Edge case: Yêu cầu không thể (budget thấp + thời gian ngắn)",
+      "input": {
+        "city": "Hanoi",
+        "budget": 10000,
+        "start_time": 10,
+        "end_time": 10.5,
+        "pace": "normal"
+      },
+      "expected": {
+        "status": "success",
+        "min_locations": 1,
+        "note": "GA nên trả về ít nhất 1 địa điểm free hoặc rỗng"
+      }
+    },
+    {
+      "id": "TC15",
+      "name": "Fixed Start Point",
+      "description": "Kiểm tra xem lịch trình có luôn bắt đầu bằng địa điểm yêu cầu không",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "start_point_id": 5
+      },
+      "expected": {
+        "status": "success",
+        "note": "Lịch trình phải bắt đầu bằng Hồ Hoàn Kiếm (ID: 5)"
+      }
+    },
+    {
+      "id": "TC16",
+      "name": "Must-visit Points",
+      "description": "Kiểm tra xem các địa điểm bắt buộc có luôn xuất hiện không",
+      "input": {
+        "city": "Hanoi",
+        "budget": 1000000,
+        "start_time": 8,
+        "end_time": 20,
+        "pace": "normal",
+        "must_visit_ids": [1, 2]
+      },
+      "expected": {
+        "status": "success",
+        "note": "Phải bao gồm Lăng Bác (ID: 1) và Văn Miếu (ID: 2)"
+      }
+    },
+    {
+      "id": "TC17",
+      "name": "Start Point + Must-visit combined",
+      "description": "Kết hợp cả điểm bắt đầu và điểm bắt buộc",
+      "input": {
+        "city": "Hanoi",
+        "budget": 500000,
+        "start_time": 8,
+        "end_time": 18,
+        "pace": "normal",
+        "start_point_id": 11,
+        "must_visit_ids": [4]
+      },
+      "expected": {
+        "status": "success",
+        "note": "Bắt đầu bằng Cafe Giảng (11) và phải có Nhà tù Hỏa Lò (4)"
+      }
+    }
+  ]
+}
